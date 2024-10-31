@@ -1,0 +1,94 @@
+
+
+.card {
+    width: 270px;
+    height: 430px;
+    background-color: #85C7DF;
+    border-radius: 30px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgb(0,0,0,18%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    width: 270px;
+    height: 270px;
+    background-color: #e0f7ff;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-button {
+    font-size: 24px;
+    color: #99c2d8;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.player-content {
+    width: 100%;
+}
+
+.title {
+    font-family: Pretendard, serif;
+    justify-self: left;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 18px;
+    margin-bottom: 0;
+}
+.subtitle {
+    font-family: Pretendard, serif;
+    justify-self: left;
+    font-size: 14px;
+    font-weight: 500;
+    color: #d1e7f0;
+    margin-top: 4px;
+    margin-bottom: 22px;
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.time {
+    font-size: 12px;
+    color: #d1e7f0;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 4px;
+    background-color: #d1e7f0;
+    border-radius: 2px;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.control-button {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}

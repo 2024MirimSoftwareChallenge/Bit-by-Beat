@@ -1,0 +1,82 @@
+.calendar-container {
+    width: 100%;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 0 10px;
+    margin-top: 30px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+header h2 {
+    margin: 0 0 0 22px;
+    font-size: 24px;
+}
+
+.navigation-after {
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 17.32px 10px 0;
+    border-color: #fff #85C7DF #fff #fff;
+    margin-right: 10px;
+}
+
+
+.navigation-before {
+    padding: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 17.32px;
+    border-color:  #ffffff #ffffff #ffffff #85C7DF;
+    margin-left: 10px;
+}
+
+.days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    color: black;
+    font-weight: bold;
+    margin: 22px 0;
+
+}
+
+.days-of-week .sunday {
+    color: red;
+}
+
+.days-of-week .saturday {
+    color: blue;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 16px;
+}
+
+.calendar-day {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 0;
+    font-size: 14px;
+    color: #333;
+    height: 100px;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #DBDBDB;
+    margin: 0;
+}
