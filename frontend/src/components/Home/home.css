@@ -1,0 +1,47 @@
+.main-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fb;
+}
+
+.header {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.greeting h1 {
+    font-family: Pretendard, serif;
+    justify-self: left;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0;
+    color: #000000;
+}
+
+.greeting p {
+    font-family: Pretendard, serif;
+    justify-self: left;
+    margin: 4px 0 0;
+    color: #000000;
+    font-weight: 700;
+
+    font-size: 22px;
+}
+
+.settings-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}

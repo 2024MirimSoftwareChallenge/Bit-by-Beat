@@ -1,0 +1,124 @@
+/* Container for the main component */
+.write-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header styling */
+.write-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #dbdbdb;
+    margin-top: 10px;
+}
+
+.close-button,
+.done-button {
+    font-family: Pretendard, serif;
+    font-weight: 400;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+
+.date {
+    font-family: Pretendard, serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Content styling */
+.content {
+    padding: 20px 24px;
+}
+
+/* Song selection section */
+.song-selection {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.song-icon {
+    font-size: 24px;
+    background: #E8ECEF;
+    width: 70px;
+    height: 70px;
+    align-content: center;
+    border-radius: 10px;
+    margin-right: 18px;
+}
+
+.select-song-text {
+    font-family: Pretendard, serif;
+    font-weight: 500;
+    font-size: 20px;
+    color: #888;
+}
+
+/* Divider line */
+.divider {
+    border: none;
+    border-top: 1px solid #DBDBDB;
+    margin: 0;
+}
+
+.tag-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap; /* 태그가 많아질 경우 다음 줄로 넘어가게 설정 */
+}
+
+/* Add tag button */
+.add-tag-button {
+    font-family: Pretendard, serif;
+    display: flex;
+    background-color: #E0F4FF;
+    color: #3489BB;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
+
+.tag-input {
+    font-family: Pretendard, serif;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #E0F4FF;
+    background: #E0F4FF;
+    border-radius: 20px;
+    outline: none;
+    color: #333;
+    box-sizing: border-box;
+    min-width: 30px;
+    /*transition: width 0.2s ease; !* 길이 조정이 부드럽게 변화하도록 *!*/
+}
+
+/* Diary textarea */
+.diary-textarea {
+    font-family: Pretendard, serif;
+    font-weight: 500;
+    width: 100%;
+    height: 100px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 18px;
+    color: #333;
+    margin-top: 30px;
+}
