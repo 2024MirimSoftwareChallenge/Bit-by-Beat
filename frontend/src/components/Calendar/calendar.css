@@ -7,7 +7,7 @@
     margin-top: 30px;
 }
 
-header {
+.calendar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -15,7 +15,7 @@ header {
     margin-bottom: 30px;
 }
 
-header h2 {
+.calendar-header h2 {
     margin: 0 0 0 22px;
     font-size: 24px;
 }
