@@ -42,7 +42,7 @@ const Calendar = () => {
 
     return (
         <div className="calendar-container">
-            <header>
+            <header className="calendar-header">
                 <h2>{year}.{(month + 1).toString().padStart(2, '0')}</h2>
                 <div className="navigation">
                     <button onClick={() => changeMonth(-1)} className="navigation-after"></button>
