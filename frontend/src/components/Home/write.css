@@ -1,13 +1,8 @@
-/* Container for the main component */
 .write-container {
     width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-    color: #333;
+    margin: 0;
 }
 
-/* Header styling */
 .write-header {
     display: flex;
     justify-content: space-between;
@@ -34,12 +29,10 @@
     font-weight: 500;
 }
 
-/* Content styling */
 .content {
     padding: 20px 24px;
 }
 
-/* Song selection section */
 .song-selection {
     display: flex;
     align-items: center;
@@ -64,7 +57,6 @@
     color: #888;
 }
 
-/* Divider line */
 .divider {
     border: none;
     border-top: 1px solid #DBDBDB;
@@ -75,10 +67,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    flex-wrap: wrap; /* 태그가 많아질 경우 다음 줄로 넘어가게 설정 */
+    flex-wrap: wrap;
 }
 
-/* Add tag button */
 .add-tag-button {
     font-family: Pretendard, serif;
     display: flex;
@@ -86,7 +77,7 @@
     color: #3489BB;
     padding: 5px 10px;
     border: none;
-    border-radius: 20px;
+    border-radius: 15px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
@@ -106,10 +97,8 @@
     color: #333;
     box-sizing: border-box;
     min-width: 30px;
-    /*transition: width 0.2s ease; !* 길이 조정이 부드럽게 변화하도록 *!*/
 }
 
-/* Diary textarea */
 .diary-textarea {
     font-family: Pretendard, serif;
     font-weight: 500;

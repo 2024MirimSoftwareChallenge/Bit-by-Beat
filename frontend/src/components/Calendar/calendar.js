@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './calendar.css';
+import { BsFillTriangleFill } from "react-icons/bs";
 
 const Calendar = () => {
     const [currentDate, setCurrentDate] = useState(new Date());
@@ -44,9 +45,9 @@ const Calendar = () => {
         <div className="calendar-container">
             <header className="calendar-header">
                 <h2>{year}.{(month + 1).toString().padStart(2, '0')}</h2>
-                <div className="navigation">
-                    <button onClick={() => changeMonth(-1)} className="navigation-after"></button>
-                    <button onClick={() => changeMonth(1)} className="navigation-before"></button>
+                <div className="calendar-navigation">
+                    <button onClick={() => changeMonth(-1)} className="navigation-before"><BsFillTriangleFill size="20" color="#85C7DF" /></button>
+                    <button onClick={() => changeMonth(1)} className="navigation-after"><BsFillTriangleFill size="20" color="#85C7DF" /></button>
                 </div>
             </header>
             <div className="days-of-week">

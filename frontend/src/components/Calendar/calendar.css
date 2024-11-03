@@ -1,7 +1,6 @@
 .calendar-container {
     width: 100%;
     margin: auto;
-    font-family: Arial, sans-serif;
     text-align: center;
     padding: 0 10px;
     margin-top: 30px;
@@ -16,38 +15,39 @@
 }
 
 .calendar-header h2 {
+    font-family: Pretendard, serif;
+    font-weight: 700;
     margin: 0 0 0 22px;
     font-size: 24px;
 }
 
-.navigation-after {
-    padding: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10px 17.32px 10px 0;
-    border-color: #fff #85C7DF #fff #fff;
+.calendar-navigation{
+    display: flex;
+    gap: 15px;
     margin-right: 10px;
 }
 
+.calendar-navigation button{
+    background: none;
+    border: none;
+}
 
-.navigation-before {
-    padding: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 10px 0 10px 17.32px;
-    border-color:  #ffffff #ffffff #ffffff #85C7DF;
-    margin-left: 10px;
+.navigation-before{
+    transform: rotate(30deg);
+}
+
+.navigation-after{
+    transform: rotate(330deg);
 }
 
 .days-of-week {
+    font-family: Pretendard, serif;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     color: black;
-    font-weight: bold;
+    font-weight: 600;
     margin: 22px 0;
-
+    font-size: 16px;
 }
 
 .days-of-week .sunday {
@@ -66,12 +66,14 @@
 }
 
 .calendar-day {
+    font-family: Pretendard, serif;
+    font-weight: 600;
     display: flex;
     text-align: center;
     justify-content: center;
     padding: 10px 0;
     font-size: 14px;
-    color: #333;
+    color: black;
     height: 100px;
 }
 
