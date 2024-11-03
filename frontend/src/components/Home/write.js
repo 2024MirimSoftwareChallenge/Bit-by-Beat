@@ -2,32 +2,29 @@ import React, { useState, useRef } from 'react';
 import './write.css';
 
 function Write() {
-    const [tags, setTags] = useState([]); // 태그 목록을 저장하는 상태
-    const inputRefs = useRef([]); // 각 인풋 필드의 참조를 저장하는 배열
+    const [tags, setTags] = useState([]);
+    const inputRefs = useRef([]);
 
-    // 태그 입력 필드 추가 함수
     const addTagInput = () => {
-        setTags([...tags, '']); // 새로운 빈 태그 인풋을 추가
+        setTags([...tags, '']);
     };
 
     // 태그 값 업데이트 함수
     const handleTagChange = (index, value) => {
         const newTags = [...tags];
         newTags[index] = value;
-        setTags(newTags); // 태그 인풋의 값을 업데이트
+        setTags(newTags);
 
-        // 개별 인풋 필드의 길이를 텍스트 길이에 맞게 조정
         if (inputRefs.current[index]) {
             const input = inputRefs.current[index];
-            input.style.width = `${Math.max(10, input.scrollWidth + 5)}px`; // 여백 추가
+            input.style.width = `${Math.max(10, input.scrollWidth + 5)}px`;
         }
     };
 
-    // 인풋 포커스 아웃 시 너비 조정
     const handleBlur = (index) => {
         if (inputRefs.current[index]) {
             const input = inputRefs.current[index];
-            input.style.width = `${Math.max(10, input.scrollWidth + 5)}px`; // 다시 너비 조정
+            input.style.width = `${Math.max(10, input.scrollWidth + 5)}px`;
         }
     };
 
@@ -58,21 +55,20 @@ function Write() {
                     {tags.map((tag, index) => (
                         <input
                             key={index}
-                            ref={(el) => (inputRefs.current[index] = el)} // 인풋 필드 참조 저장
+                            ref={(el) => (inputRefs.current[index] = el)}
                             type="text"
                             value={tag}
                             onChange={(e) => handleTagChange(index, e.target.value)}
-                            onBlur={() => handleBlur(index)} // 포커스를 잃었을 때 너비 조정
+                            onBlur={() => handleBlur(index)}
                             className="tag-input"
                             placeholder="#"
-                            style={{ width: `${Math.max(10, tag.length * 10)}px` }} // 초기 너비 설정
+                            style={{ width: `${Math.max(10, tag.length * 10)}px` }}
                         />
                     ))}
                 </div>
 
                 <hr className="divider" />
 
-                {/* Diary Entry */}
                 <textarea
                     className="diary-textarea"
                     placeholder="오늘은 어떤 하루였나요?"
