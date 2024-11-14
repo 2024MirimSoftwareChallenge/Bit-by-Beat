@@ -10,10 +10,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 60px 0 30px 34px;
+    margin: 60px 0 0 34px;
 }
 
-.greeting h1 {
+.home-greeting h1 {
     font-family: Pretendard, serif;
     justify-self: left;
     font-size: 30px;
@@ -22,7 +22,7 @@
     color: #000000;
 }
 
-.greeting p {
+.home-greeting p {
     font-family: Pretendard, serif;
     justify-self: left;
     margin: 4px 0 0;
@@ -38,9 +38,10 @@
     cursor: pointer;
 }
 
-.card-container {
+.home-card-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    transform: scale(1.1);
+    padding-top: 60px;
 }

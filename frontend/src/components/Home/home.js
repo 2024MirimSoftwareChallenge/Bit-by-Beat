@@ -12,13 +12,13 @@ const Home = () => {
     return (
         <div className="main-screen">
             <header className="home-header">
-                <div className="greeting">
+                <div className="home-greeting">
                     <h1>미림님</h1>
                     <p>오늘은 어떤 음악을 들으셨나요?</p>
                 </div>
             </header>
 
-            <main className="card-container">
+            <main className="home-card-container">
                 <MusicPlayer onAddButtonClick={handleAddButtonClick}  />
             </main>
 

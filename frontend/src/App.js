@@ -3,7 +3,8 @@ import './App.css';
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/home";
-import Write from "./components/Home/write";
+import WriteFirst from "./components/Home/writeFirst";
+import WriteSecond from "./components/Home/writeSecond";
 import Diary from "./components/Home/diary";
 import Calendar from "./components/Calendar/calendar";
 import SignUp from "./components/Sign/signUp";
@@ -18,7 +19,8 @@ function App() {
           <BrowserRouter>
               <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="/Write" element={<Write />} />
+                  <Route path="/WriteFirst" element={<WriteFirst />} />
+                  <Route path="/WriteSecond" element={<WriteSecond />} />
                   <Route path="/Diary" element={<Diary />} />
                   <Route path="/Calendar" element={<Calendar />} />
                   <Route path="/SignUp" element={<SignUp />} />

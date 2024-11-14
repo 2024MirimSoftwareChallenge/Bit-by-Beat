@@ -10,7 +10,7 @@ const Search = () => {
     // const navigate = useNavigate();
     //
     // const handleSearchButtonClick = () => {
-    //     // navigate("/Write");
+    //     // navigate("/WriteSecond");
     // };
 
     // 컴포넌트에 style 적용
