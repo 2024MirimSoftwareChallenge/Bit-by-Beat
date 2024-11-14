@@ -37,8 +37,8 @@ const MusicPlayer = ({ onAddButtonClick }) => {
                 <button className="add-button" onClick={onAddButtonClick}>+</button>
             </div>
             <div className="player-content">
-                <p className="title">오늘 기록하기</p>
-                <p className="subtitle">오늘 하루는 어땠나요?</p>
+                <p className="player-title">오늘 기록하기</p>
+                <p className="player-subtitle">오늘 하루는 어땠나요?</p>
                 <AudioController
                     currentTime={currentTime}
                     duration={duration}

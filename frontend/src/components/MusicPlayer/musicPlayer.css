@@ -32,7 +32,7 @@
     width: 100%;
 }
 
-.title {
+.player-title {
     font-family: Pretendard, serif;
     justify-self: left;
     font-size: 20px;
@@ -41,7 +41,7 @@
     margin-top: 18px;
     margin-bottom: 0;
 }
-.subtitle {
+.player-subtitle {
     font-family: Pretendard, serif;
     justify-self: left;
     font-size: 14px;
