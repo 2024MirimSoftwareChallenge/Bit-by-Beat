@@ -1,0 +1,17 @@
+.tag-container {
+    display: inline-flex;
+    padding: 3px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 15px;
+    background: #E0F4FF;
+}
+
+.tag-content {
+    color: #3489BB;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}

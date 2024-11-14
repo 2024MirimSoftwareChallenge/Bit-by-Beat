@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Pretendard, serif;
+}
+
+.container {
+    display: flex;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.signup-header {
+    display: flex;
+    justify-content: left;
+    margin: 175px 50px 0px 0px;
+}
+
+.title {
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0px 60px 0px 13px;     /* 상 우 하 좌 */
+    justify-items: left;
+}
+
+.title > p {
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.75px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 180px;
+    /*margin-top: -200px;*/
+}
+
+.btn-container {
+    margin: 0;
+    align-items: center;
+    column-gap: 10px;
+    width: 324px;
+    height: 53px;
+    background-color: #ffffff;
+    border-radius: 60px;
+    border: #D9D9D9 solid;
+    cursor: pointer;
+}
+
+.google-logo {
+    width: 24px;
+    height: 24px;
+}
+
+.login-btn {
+    outline: none;
+    border: none;
+    font-size: 18px;
+    background-color: #ffffff;
+}
