@@ -7,7 +7,7 @@
     font-family: Pretendard, serif;
 }
 
-.writefirst-header {
+.write-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,7 +26,7 @@
     color: #333;
 }
 
-.writefirst-date {
+.write-date {
     font-size: 18px;
     font-weight: 500;
 }
@@ -41,7 +41,13 @@
     border-radius: 20px;
     aspect-ratio: 1;
     background-color: #E8ECEF;
+    overflow: hidden;
 }
+.writefirst-image-placeholder img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover; /* 이미지를 컨테이너에 꽉 차게 설정 */
+ }
 
 .placeholder-text {
     font-size: 18px;

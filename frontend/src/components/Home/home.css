@@ -28,7 +28,6 @@
     margin: 4px 0 0;
     color: #000000;
     font-weight: 700;
-
     font-size: 22px;
 }
 
@@ -42,6 +41,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: scale(1.1);
     padding-top: 60px;
+}
+
+.disabled {
+    pointer-events: none; /* 클릭 방지 */
+    opacity: 0.5; /* 반투명 효과 */
 }

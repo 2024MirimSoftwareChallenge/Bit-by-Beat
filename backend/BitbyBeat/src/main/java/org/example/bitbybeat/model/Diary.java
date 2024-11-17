@@ -1,7 +1,8 @@
 package org.example.bitbybeat.model;
 
 import jakarta.persistence.*;
-import java.time.LocalDateTime;
+
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -11,24 +12,23 @@ public class Diary {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private Long userId;  // userId 필드 (외래키 제약 없음)
+    private Long userId;
 
     @ManyToOne
     @JoinColumn(name = "song_id", nullable = false)
-    private Song song; // song 객체로 참조
+    private Song song;
 
-    private String content;  // content 필드
+    private String content;
 
-    @ElementCollection  // 컬렉션을 처리하기 위한 어노테이션
-    @CollectionTable(name = "diary_tags", joinColumns = @JoinColumn(name = "diary_id")) // 다이어리와 태그를 연결할 테이블
-    @Column(name = "tag")  // 태그의 컬럼 이름
-    private List<String> tags; // 태그 목록
+    @ElementCollection
+    @CollectionTable(name = "diary_tags", joinColumns = @JoinColumn(name = "diary_id"))
+    @Column(name = "tag")
+    private List<String> tags;
 
     private String imgPath;
 
-    private LocalDateTime date = LocalDateTime.now();
+    private LocalDate date = LocalDate.now();
 
-    // songTitle을 추가
     @Transient  // 이 필드는 DB에 저장되지 않음
     private String songTitle;
 
@@ -77,11 +77,11 @@ public class Diary {
     }
 
     // Getter and Setter for date
-    public LocalDateTime getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(LocalDate date) {
         this.date = date;
     }
 
