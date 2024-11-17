@@ -7,9 +7,13 @@ import jakarta.persistence.Id;
 public class Song {
     @Id
     private Long id;
+
     private String title;
 
-    // Getters and Setters
+    private String singer;
+
+    private String songPath;
+
     public Long getId() {
         return id;
     }
@@ -24,5 +28,21 @@ public class Song {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getSinger() {
+        return singer;
+    }
+
+    public void setSinger(String singer) {
+        this.singer = singer;
+    }
+
+    public String getSongPath() {
+        return songPath;
+    }
+
+    public void setSongPath(String songPath) {
+        this.songPath = songPath;
     }
 }

@@ -9,5 +9,4 @@ public class BitbyBeatApplication {
     public static void main(String[] args) {
         SpringApplication.run(BitbyBeatApplication.class, args);
     }
-
 }

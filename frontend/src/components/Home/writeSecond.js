@@ -1,12 +1,15 @@
 import React, { useState, useRef } from 'react';
 import './writeSecond.css';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate  } from 'react-router-dom';
 import axios from 'axios'; // axios를 import
 
 function WriteSecond() {
 
     const location = useLocation();
+    const navigate = useNavigate();
     const imageUrl = location.state?.imageUrl; // 이전 페이지에서 전달된 이미지 URL 받아옴
+    const songId = location.state?.songId;      // 이전 페이지에서 전달된 songId
+    const songTitle = location.state?.songTitle;
     const [tags, setTags] = useState([]);
     const [diaryContent, setDiaryContent] = useState(""); // 일기 내용 상태 추가
     const inputRefs = useRef([]);
@@ -44,16 +47,16 @@ function WriteSecond() {
                 content: diaryContent, // 작성된 일기 내용
                 tags: tags, // 입력된 태그들
                 img_path: imageUrl, // 이미지 URL
-                song_id: 1,
+                song_id: songId,
                 user_id: 1,
             };
 
             // 서버에 일기 데이터 전송
-            const response = await axios.post('http://localhost:8080/api/diaries/', diaryData);
+            const response = await axios.post('http://localhost:8080/api/diaries', diaryData);
 
             if (response.status === 200) {
                 alert('일기가 성공적으로 저장되었습니다.');
-                // 성공 시, 다른 페이지로 리다이렉트 (필요시)
+                navigate('/');
             } else {
                 alert('일기 저장에 실패했습니다.');
             }
@@ -67,28 +70,24 @@ function WriteSecond() {
         <div className="write-container">
             {/* Header Section */}
             <header className="write-header">
-                <button className="close-button">✕</button>
-                <h2 className="date">10월 21일 월요일</h2>
-                <button className="done-button" onClick={handleSubmit}>완료</button>
+                <button className="close-button">이전</button>
+                <h2 className="write-date">10월 21일 월요일</h2>
+                <button className="more-button" onClick={handleSubmit}>완료</button>
             </header>
 
-            {/* Content Section */}
             <div className="content">
-                {/* Image Preview */}
                 <div className="song-selection">
                     <div className="writesecond-image">
                         {imageUrl && <img src={imageUrl} alt="Uploaded" />}
                     </div>
-                    <span className="select-song-text">노래를 선택하세요</span>
+                    <span className="select-song-text">{songTitle}</span>
                 </div>
 
                 <hr className="divider" />
 
-                {/* Add Tag Section */}
                 <div className="tag-section">
                     <button className="add-tag-button" onClick={addTagInput}>태그 추가</button>
 
-                    {/* 태그 인풋 필드 */}
                     {tags.map((tag, index) => (
                         <input
                             key={index}

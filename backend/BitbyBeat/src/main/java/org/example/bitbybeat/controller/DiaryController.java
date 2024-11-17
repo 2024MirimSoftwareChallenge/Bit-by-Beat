@@ -10,11 +10,12 @@ import org.springframework.web.multipart.MultipartFile;
 import org.example.bitbybeat.repository.SongRepository;
 import org.example.bitbybeat.repository.DiaryRepository;
 
+import java.util.Optional;
+import java.time.LocalDate;
+
+
 import java.io.File;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.List;
 import java.util.Map;
 
@@ -49,8 +50,7 @@ public class DiaryController {
         }
     }
 
-    // 주의: 이 부분의 매핑 경로를 "/api/diaries"가 아니라 "/"로 변경
-    @PostMapping("/")
+    @PostMapping
     public ResponseEntity<?> createDiary(@RequestBody Map<String, Object> diaryData) {
         try {
             Long songId = ((Number) diaryData.get("song_id")).longValue();
@@ -73,4 +73,31 @@ public class DiaryController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred while saving the diary.");
         }
     }
+
+    @GetMapping("/today")
+    public Optional<Diary> getTodayDiary() {
+        LocalDate today = LocalDate.now();
+        return diaryRepository.findByDateWithTags(today); // 오늘 날짜와 태그가 포함된 일기 반환
+    }
+
+    @GetMapping("/images")
+    public ResponseEntity<List<Map<String, String>>> getImagesForMonth(
+            @RequestParam("year") int year,
+            @RequestParam("month") int month) {
+        LocalDate startDate = LocalDate.of(year, month, 1);
+        LocalDate endDate = startDate.withDayOfMonth(startDate.lengthOfMonth());
+
+        List<Diary> diaries = diaryRepository.findByDateBetween(startDate, endDate);
+
+        List<Map<String, String>> images = diaries.stream()
+                .map(diary -> Map.of(
+                        "date", diary.getDate().toString(),
+                        "imgPath", diary.getImgPath()
+                ))
+                .toList();
+
+        return ResponseEntity.ok(images);
+    }
+
+
 }

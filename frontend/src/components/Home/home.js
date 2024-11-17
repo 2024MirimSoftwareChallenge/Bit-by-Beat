@@ -1,14 +1,36 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MusicPlayer from "../MusicPlayer/musicPlayer";
+import axios from "axios";
 import "./home.css";
 
 const Home = () => {
     const navigate = useNavigate();
+    const [todayDiary, setTodayDiary] = useState(null);
 
     const handleAddButtonClick = () => {
-        navigate("/Write");
+        navigate("/WriteFirst");
     };
+
+    const handleCardClick = () => {
+        if (todayDiary) {
+            navigate("/diary"); // 오늘 일기가 있으면 /diary로 이동
+        }
+    };
+
+    useEffect(() => {
+        const fetchTodayDiary = async () => {
+            try {
+                const response = await axios.get("http://localhost:8080/api/diaries/today");
+                setTodayDiary(response.data || null); // 오늘 일기가 없으면 null
+                console.log(response.data);
+            } catch (error) {
+                console.error("Error fetching today's diary:", error);
+            }
+        };
+        fetchTodayDiary();
+    }, []);
+
     return (
         <div className="main-screen">
             <header className="home-header">
@@ -18,10 +40,17 @@ const Home = () => {
                 </div>
             </header>
 
-            <main className="home-card-container">
-                <MusicPlayer onAddButtonClick={handleAddButtonClick}  />
+            <main className={`home-card-container ${!todayDiary ? 'disabled' : ''}`}
+            onClick={handleCardClick}>
+                {todayDiary ? (
+                    <MusicPlayer
+                        diary={todayDiary} // 일기 데이터를 전달
+                        onAddButtonClick={handleAddButtonClick}
+                    />
+                ) : (
+                    <MusicPlayer onAddButtonClick={handleAddButtonClick} />
+                )}
             </main>
-
         </div>
     );
 };
