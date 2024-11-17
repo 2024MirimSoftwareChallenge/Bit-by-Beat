@@ -35,8 +35,8 @@ public class DiaryController {
 
     @PostMapping("/uploadImage")
     public ResponseEntity<?> uploadImage(@RequestParam("file") MultipartFile file) {
-//        String uploadDir = "C://MirimSecondProjects/MirimSoftwareChallenge/backend/BitbyBeat/src/main/resources/uploads/images/";
-        String uploadDir = "C:/Project/2학년/2024mirimSoftwareChallenge/backend/BitbyBeat/src/main/resources/uploads/images/";
+        String uploadDir = "C://MirimSecondProjects/MirimSoftwareChallenge/backend/BitbyBeat/src/main/resources/uploads/images/";
+//        String uploadDir = "C:/Project/2학년/2024mirimSoftwareChallenge/backend/BitbyBeat/src/main/resources/uploads/images/";
         String fileName = file.getOriginalFilename();
         File targetFile = new File(uploadDir + fileName);
 

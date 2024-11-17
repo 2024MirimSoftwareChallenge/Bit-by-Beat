@@ -17,13 +17,13 @@ function App() {
           <BrowserRouter>
               <Routes>
                   <Route path="/" element={<Home />} />
-                  <Route path="/WriteFirst" element={<WriteFirst />} />
-                  <Route path="/WriteSecond" element={<WriteSecond />} />
-                  <Route path="/Diary" element={<Diary />} />
-                  <Route path="/Calendar" element={<Calendar />} />
-                  <Route path="/SignUp" element={<SignUp />} />
-                  <Route path="/SignUpDetail" element={<SingUpDetail />} />
-                  <Route path="/Search" element={<Search />}/>
+                  <Route path="/writefirst" element={<WriteFirst />} />
+                  <Route path="/writesecond" element={<WriteSecond />} />
+                  <Route path="/diary" element={<Diary />} />
+                  <Route path="/calendar" element={<Calendar />} />
+                  <Route path="/signup" element={<SignUp />} />
+                  <Route path="/signupdetail" element={<SingUpDetail />} />
+                  <Route path="/search" element={<Search />}/>
               </Routes>
           </BrowserRouter>
       </div>

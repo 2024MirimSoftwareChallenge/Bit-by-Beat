@@ -10,7 +10,7 @@ const Home = () => {
     const [todayDiary, setTodayDiary] = useState(null);
 
     const handleAddButtonClick = () => {
-        navigate("/WriteFirst");
+        navigate("/writefirst");
     };
 
     const handleCardClick = () => {

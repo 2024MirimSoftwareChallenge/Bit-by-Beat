@@ -79,7 +79,7 @@ const WriteFirst = () => {
         const uploadedImageUrl = await handleImageUpload();
         if (uploadedImageUrl && selectedSong) {
             const fullImageUrl = `http://localhost:8080${uploadedImageUrl}`;
-            navigate('/writeSecond', { state: { imageUrl: fullImageUrl, songId: selectedSong.id, songTitle: selectedSong.title } });
+            navigate('/writesecond', { state: { imageUrl: fullImageUrl, songId: selectedSong.id, songTitle: selectedSong.title } });
         } else if (!selectedSong) {
             alert("노래를 선택해주세요.");
         }
