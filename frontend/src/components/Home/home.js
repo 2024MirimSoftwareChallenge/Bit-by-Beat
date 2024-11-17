@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import MusicPlayer from "../MusicPlayer/musicPlayer";
+import Nav from "../navbar";
 import axios from "axios";
 import "./home.css";
 
@@ -40,17 +41,17 @@ const Home = () => {
                 </div>
             </header>
 
-            <main className={`home-card-container ${!todayDiary ? 'disabled' : ''}`}
-            onClick={handleCardClick}>
+            <main className="home-card-container" onClick={handleCardClick}>
                 {todayDiary ? (
                     <MusicPlayer
                         diary={todayDiary} // 일기 데이터를 전달
                         onAddButtonClick={handleAddButtonClick}
                     />
                 ) : (
-                    <MusicPlayer onAddButtonClick={handleAddButtonClick} />
+                    <MusicPlayer onAddButtonClick={handleAddButtonClick}/>
                 )}
             </main>
+            <Nav />
         </div>
     );
 };

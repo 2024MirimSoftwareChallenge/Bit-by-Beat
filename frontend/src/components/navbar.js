@@ -11,12 +11,12 @@ const Nav = () => {
                         <img src={isActive ? "/images/ActiveSearch.png" : "/images/DisactiveSearch.png"} alt="search-icon"/>
                     )}
                 </NavLink>
-                <NavLink to="/">
+                <NavLink to="/Home">
                     {({ isActive }) => (
                         <img src={isActive ? "/images/ActiveHome.png" : "/images/DisactiveHome.png"} alt="home-icon"/>
                     )}
                 </NavLink>
-                <NavLink to="/Calendar" activeClassName="active">
+                <NavLink to="/Calendar">
                     {({ isActive }) => (
                         <img src={isActive ? "/images/ActivCal.png" : "/images/DisactiveCal.png"} alt="cal-icon"/>
                     )}
