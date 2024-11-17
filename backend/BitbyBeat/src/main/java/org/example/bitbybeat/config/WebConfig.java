@@ -20,11 +20,11 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         // 이미지 파일들이 저장된 로컬 경로
-//        String uploadDir = "file:C:/MirimSecondProjects/MirimSoftwareChallenge/backend/BitbyBeat/src/main/resources/uploads/images/";
-//        String musicDir = "file:C:/MirimSecondProjects/MirimSoftwareChallenge/backend/BitbyBeat/src/main/resources/music/";
+        String uploadDir = "file:C:/MirimSecondProjects/MirimSoftwareChallenge/backend/BitbyBeat/src/main/resources/uploads/images/";
+        String musicDir = "file:C:/MirimSecondProjects/MirimSoftwareChallenge/backend/BitbyBeat/src/main/resources/music/";
 
-        String uploadDir = "file:C:/Project/2학년/2024mirimSoftwareChallenge/backend/BitbyBeat/src/main/resources/uploads/images/";
-        String musicDir = "file:C:/Project/2학년/2024mirimSoftwareChallenge/backend/BitbyBeat/src/main/resources/music/";
+//        String uploadDir = "file:C:/Project/2학년/2024mirimSoftwareChallenge/backend/BitbyBeat/src/main/resources/uploads/images/";
+//        String musicDir = "file:C:/Project/2학년/2024mirimSoftwareChallenge/backend/BitbyBeat/src/main/resources/music/";
 
         // http://localhost:8080/uploads/images/ 경로를 통해 이미지 파일에 접근할 수 있도록 매핑
         registry.addResourceHandler("/uploads/images/**").addResourceLocations(uploadDir);
