@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./calendar.css";
+import Nav from "../navbar";
 import { BsFillTriangleFill } from "react-icons/bs";
 
 const Calendar = () => {
@@ -74,33 +75,37 @@ const Calendar = () => {
     };
 
     return (
-        <div className="calendar-container">
-            <header className="calendar-header">
-                <h2>
-                    {year}.{month.toString().padStart(2, "0")}
-                </h2>
-                <div className="calendar-navigation">
-                    <button onClick={() => changeMonth(-1)} className="navigation-before">
-                        <BsFillTriangleFill size="20" color="#85C7DF" />
-                    </button>
-                    <button onClick={() => changeMonth(1)} className="navigation-after">
-                        <BsFillTriangleFill size="20" color="#85C7DF" />
-                    </button>
+        <div>
+            <div className="calendar-container">
+                <header className="calendar-header">
+                    <h2>
+                        {year}.{month.toString().padStart(2, "0")}
+                    </h2>
+                    <div className="calendar-navigation">
+                        <button onClick={() => changeMonth(-1)} className="navigation-before">
+                            <BsFillTriangleFill size="20" color="#85C7DF"/>
+                        </button>
+                        <button onClick={() => changeMonth(1)} className="navigation-after">
+                            <BsFillTriangleFill size="20" color="#85C7DF"/>
+                        </button>
+                    </div>
+                </header>
+                <div className="days-of-week">
+                    <span className="sunday">일</span>
+                    <span>월</span>
+                    <span>화</span>
+                    <span>수</span>
+                    <span>목</span>
+                    <span>금</span>
+                    <span className="saturday">토</span>
                 </div>
-            </header>
-            <div className="days-of-week">
-                <span className="sunday">일</span>
-                <span>월</span>
-                <span>화</span>
-                <span>수</span>
-                <span>목</span>
-                <span>금</span>
-                <span className="saturday">토</span>
+                <hr className="divider"/>
+                <div className="calendar-grid">{renderCalendarDays()}</div>
             </div>
-            <hr className="divider" />
-            <div className="calendar-grid">{renderCalendarDays()}</div>
+            <Nav />
         </div>
     );
+
 };
 
 export default Calendar;
