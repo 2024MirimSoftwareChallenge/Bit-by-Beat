@@ -15,4 +15,9 @@ public interface DiaryRepository extends JpaRepository<Diary, Long> {
     Optional<Diary> findByDateWithTags(@Param("date") LocalDate date);
     List<Diary> findByDateBetween(LocalDate startDate, LocalDate endDate);
 
+    // 모든 태그 목록을 중복 제거 후 조회
+    @Query("SELECT distinct t FROM Diary d join d.tags t") List<String> findAllTags();
+
+    // userId와 태그에 맞는 post 조회
+    List<Diary> findByUserIdAndTagsContaining(Long userId, String tags);
 }
