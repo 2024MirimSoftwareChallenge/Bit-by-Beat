@@ -10,6 +10,7 @@
 
 .greeting {
     font-family: Pretendard, serif;
+    justify-items: left;
     font-size: 30px;
     font-weight: 700;
     width: 300px;
@@ -18,6 +19,7 @@
 
 .greeting > h1 {
     color: #5C92C1;
+    margin: 0;
 }
 
 .input-container {

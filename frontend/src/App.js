@@ -10,8 +10,6 @@ import Calendar from "./components/Calendar/calendar";
 import SignUp from "./components/Sign/signUp";
 import SingUpDetail from "./components/Sign/signUpDetail";
 import Search from './components/SearchPost/search';
-import Post from './components/SearchPost/post';
-// import Nav from './components/navbar';
 
 function App() {
   return (
@@ -26,10 +24,6 @@ function App() {
                   <Route path="/SignUp" element={<SignUp />} />
                   <Route path="/SignUpDetail" element={<SingUpDetail />} />
                   <Route path="/Search" element={<Search />}/>
-
-              {/*    component test   */}
-              {/*    <Route path="/Post" element={<Post />} />*/}
-              {/*    <Route path="/nav" element={<Nav />} />*/}
               </Routes>
           </BrowserRouter>
       </div>
