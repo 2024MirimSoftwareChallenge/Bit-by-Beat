@@ -4,12 +4,17 @@
     font-family: Pretendard, serif;
 }
 
-.container {
+.signup-container {
     display: flex;
     background-color: #ffffff;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+}
+
+.signup-line-img {
+    width: 1px;
+    height: 182px;
 }
 
 .signup-header {
@@ -65,4 +70,9 @@
     border: none;
     font-size: 18px;
     background-color: #ffffff;
+}
+
+.signup-logo {
+    width: 190px;
+    height: 180px;
 }
